@@ -20,24 +20,27 @@ ice5 = IceCream("ChocolateChip", 3);      // value of 8
 function sweetestIcecream(arr) { 
   // Converting flavor strings to numerical values of flavor points
   var points = [];
+  arr.forEach(flavorPointsAssignment);
 
-  arr.forEach(element => {
+  function flavorPointsAssignment (IceCream) {
     if (element.flavor = "Plain") {
-      points.push (0) ;
+    points.push (0) ;
     } else if (element.flavor = "Vanillla") {
-      points.push (5) ;
+    points.push (5) ;
     } else if (element.flavor = "ChocolateChip" ) {
-      points.push (5) ;
+    points.push (5) ;
     } else if (element.flavor = "Strawberry") {
-      points.push (10) ;
+    points.push (10) ;
     } else if (element.flavor = "Chocolate") {
-      points.push (10) ;
+    points.push (10) ;
     } else { console.log ("Error. Unknown flavor or a typo.")
-  } 
-  );
+    } 
+  }
 
   // Adding sprinkles points:
-  arr.forEach(element => {
+  arr.forEach(sprinklesPointsAssignment);
+  
+  sprinklesPointsAssignment = (IceCream)  => {
     points[i] += element.numSprinkles;
   }
 
