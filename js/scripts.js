@@ -7,12 +7,14 @@ class IceCream {
   }
 };
 
-ice1 = IceCream("Chocolate", 13);         // value of 23
-ice2 = IceCream("Vanillla", 0);           // value of 5
-ice3 = IceCream("Strawberry", 7);        // value of 17
-ice4 = IceCream("Plain", 18);             // value of 18
-ice5 = IceCream("ChocolateChip", 3);      // value of 8
+// Data from the task:
+ice1 = new IceCream("Chocolate", 13);         // value of 23
+ice2 = new IceCream("Vanillla", 0);           // value of 5
+ice3 = new IceCream("Strawberry", 7);        // value of 17
+ice4 = new IceCream("Plain", 18);             // value of 18
+ice5 = new IceCream("ChocolateChip", 3);      // value of 8
 
+// Examples from the task:
 //sweetestIcecream([ice1, ice2, ice3, ice4, ice5]) ➞ 23
 //sweetestIcecream([ice3, ice1]) ➞ 23
 //sweetestIcecream([ice3, ice5]) ➞ 17
@@ -37,25 +39,16 @@ function sweetestIcecream(arr) {
     } 
   }
 
-  // Adding sprinkles points:
+  // Adding sprinkles points. It's an arrow function, isn't it:
   arr.forEach(sprinklesPointsAssignment);
-  
-  sprinklesPointsAssignment = (IceCream)  => {
-    points[i] += element.numSprinkles;
-  }
+  sprinklesPointsAssignment = (IceCream)  => points[i] += element.numSprinkles;
 
   // Sorting the array as offered on https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_sort3
-  sorting = (points) => points.sort(function(a, b){return a - b})
+  sorting = (points) => points.sort(function(a, b){return a - b});
 
-  console.log ( points[0]);
   return ( points[0] );  
   }
 
-
-  ice1.flavor
-
-
-
-  console.log (sweetestIcecream([ice1, ice2, ice3, ice4, ice5]));
-  return (sweetestIcecream([ice1, ice2, ice3, ice4, ice5]));
-  }
+// Trying the function:
+console.log (sweetestIcecream([ice1, ice2, ice3, ice4, ice5]));
+ 
