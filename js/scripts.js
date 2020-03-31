@@ -25,23 +25,25 @@ function sweetestIcecream(arr) {
   arr.forEach(flavorPointsAssignment);
 
   function flavorPointsAssignment (IceCream) {
-    if (element.flavor = "Plain") {
+    if (IceCream.flavor = "Plain") {
     points.push (0) ;
-    } else if (element.flavor = "Vanillla") {
+    } else if (IceCream.flavor = "Vanillla") {
     points.push (5) ;
-    } else if (element.flavor = "ChocolateChip" ) {
+    } else if (IceCream.flavor = "ChocolateChip" ) {
     points.push (5) ;
-    } else if (element.flavor = "Strawberry") {
+    } else if (IceCream.flavor = "Strawberry") {
     points.push (10) ;
-    } else if (element.flavor = "Chocolate") {
+    } else if (IceCream.flavor = "Chocolate") {
     points.push (10) ;
     } else { console.log ("Error. Unknown flavor or a typo.")
     } 
   }
 
   // Adding sprinkles points. It's an arrow function, isn't it:
+  var i;
+  sprinklesPointsAssignment = (IceCream)  => points[i] += IceCream.numSprinkles;
   arr.forEach(sprinklesPointsAssignment);
-  sprinklesPointsAssignment = (IceCream)  => points[i] += element.numSprinkles;
+  
 
   // Sorting the array as offered on https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_sort3
   sorting = (points) => points.sort(function(a, b){return a - b});
